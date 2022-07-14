@@ -23,9 +23,9 @@ async function getISS() {
     const data = await response.json();
     const { latitude, longitude } = data; // destructuring: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
     
-    // L.marker([latitude, longitude]).addTo(map);
-    marker.setLatLng([latitude, longitude]);
     
+    marker.setLatLng([latitude, longitude]);
+    map.setView([latitude, longitude], 4);
     document.querySelector('#lat').textContent = latitude;
     document.querySelector('#lon').textContent = longitude;
     console.log(latitude);
@@ -33,3 +33,5 @@ async function getISS() {
 }
 getISS();
 
+// Automatically refreshes the page every second
+setInterval(getISS, 1000);
