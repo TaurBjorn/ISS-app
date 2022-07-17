@@ -26,8 +26,8 @@ async function getISS() {
     
     marker.setLatLng([latitude, longitude]);
     map.setView([latitude, longitude], 4);
-    document.querySelector('#lat').textContent = latitude;
-    document.querySelector('#lon').textContent = longitude;
+    document.querySelector('#lat').textContent = `${latitude}°`;
+    document.querySelector('#lon').textContent = `${longitude}°`;
     document.querySelector('#altitude').textContent = `${altitude.toFixed(1)} Km`; // toFixed()-method eliminates the number of decimals. 
     document.querySelector('#velo').textContent = `${velocity.toFixed(2)} Km/h`;
     document.querySelector('#date').textContent = timestamp;
