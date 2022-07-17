@@ -1,3 +1,31 @@
+body {
+    background-color: aquamarine;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+#container-info {
+    font-size: 1.875rem;
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-style: italic;
+    color: white;
+    background-color: brown;
+    height: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+
+
 #iss-map {
-    height: 1000px;
+    height: 62.5rem;
+    width: 93.75rem;
+    border: 5px solid black;
+    
 }
